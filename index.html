@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<link href="/dist/output.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<title>Elections 2022</title>
+
+<script>
+  $(function() { 
+  $('.dropdown-toggle').click(function() { $(this).next('.dropdown').slideToggle();
+  });
+  $(document).click(function(e) 
+  { 
+  var target = e.target; 
+  if (!$(target).is('.dropdown-toggle') && !$(target).parents().is('.dropdown-toggle')) 
+    { $('.dropdown').slideUp(); }
+  });
+  });
+
+  $(document).ready(function(){
+  $(":button").css("background-color", "red");
+});
+</script>
+
+</head>
+<body class="bg-gray-300">
+  <div class="container mx-auto pb-10">
+    <h1 class="text-8xl text-center">PHILIPPINES DAILY</h1>
+  </div>
+  
+  <div id="nav">
+    <nav class="font-sans flex flex-col text-center sm:flex-row sm:text-left sm:justify-between py-4 px-6 bg-gray-500 shadow sm:items-baseline w-full">
+          <a class="dropdown-toggle" href="#">Show Me Around</a>
+          <ul class="dropdown">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Election Day</a></li>
+            <li><a href="#"></a></li>
+          </ul>
+    </nav>
+    </div>   
+    <div class="bg-gray-100 text-right content-evenly">
+        <img src="images\bg.png" alt="first image"class="object-cover h-full w-screen">   
+  </div>
+  <div class="container mx-auto pt-10">
+    <h1 class="text-8xl text-center">ELECTIONS 2022</h1>
+  </div>
+  <div class="max-w-sm w-full lg:max-w-full lg:flex mt-10">
+    <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+      <div class="mb-8">
+        <div class="text-gray-900 font-bold text-xl mb-2">About Elections 2022</div>
+        <p class="text-gray-700 text-base">
+          On May 9, 2022, registered voters will cast their ballots to elect officials who will fill executive and legislative posts at the national, provincial and local levels.
+          In total, the Filipino people shall elect into office:
+      </p>
+        <ul style="list-style-type:square;" class="p-5">
+          <li>President</li>
+          <li>Vice president</li>
+          <li>Senators</li>
+          <li>Members of the House of Representatives from district and party-list groups</li>
+          <li>Members of provincial boards</li>
+          <li>Provincial governors and vice-governors</li>
+          <li>Mayors and vice-mayors of cities and municipalities</li>
+          <li>Councilors</li>    
+        </ul>
+        <p class="text-gray-700 text-base">
+          Elections for the positions of barangay captain, kagawad, and the sangguniang kabataan will be held on December 5, 2022 per R.A. 11462.
+      </p>
+      </div>
+      <div class="flex items-center">
+        <button onclick="window.location.href='https://votepilipinas.com/index.html';">Click Here For More Information</button>
+      </div>
+    </div>
+  </div> 
+
+  <div class="p-10">
+    <!--Card 1-->
+    <div class=" w-full lg:max-w-full lg:flex flex justify-center items-center">
+      <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+        <div class="mb-8 text-center">
+          <p class="text-gray-700 text-6xl text-bold">65.7 Million</p>
+          <p class="text-xl">Domestic voters</p>
+        </div>
+        </div>
+      <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden">
+        <img src="images\voteImage1.png" alt="first image"class="object-cover h-full w-screen">   
+      </div>
+      <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+        <div class="mb-8 text-center">
+          <p class="text-gray-700 text-6xl text-bold">1.8 Million</p>
+          <p class="text-xl">Overseas voters</p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
